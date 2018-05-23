@@ -18,11 +18,11 @@ from django.urls import path
 from django.views import generic
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-  url(r'^admin/', admin.site.urls),
-  url(r'^view2/',
+  path('admin/', admin.site.urls),
+  #url(r'^admin/', admin.site.urls),
+  path('view2/',
       generic.TemplateView.as_view(template_name='view2.html')),
-  url(r'^$',
+  path('view1/',
       generic.TemplateView.as_view(template_name='view1.html')),
 
 ]

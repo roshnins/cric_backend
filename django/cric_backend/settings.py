@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader'
 ]
 
 MIDDLEWARE = [
@@ -48,13 +49,15 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '/Users/roshni/cric_backend/django/cric_backend/static'),
+]
 ROOT_URLCONF = 'cric_backend.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'cric_backend/templates')],
+        'DIRS': [os.path.join(BASE_DIR, '/Users/roshni/cric_backend/django/cric_backend/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
